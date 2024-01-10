@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-color: black;
+}
+
+@media (max-width: 640px) {
+  main {
+    background:
+      linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%),
+      linear-gradient(
+        271deg,
+        rgba(0, 0, 0, 0.2) 13.87%,
+        rgba(0, 0, 0, 0) 98.99%
+      ),
+      linear-gradient(
+        110deg,
+        rgba(0, 0, 0, 0.94) 13.66%,
+        rgba(0, 0, 0, 0) 93.14%
+      ),
+      linear-gradient(4deg, #000 -1.63%, rgba(0, 0, 0, 0) 126.68%),
+      linear-gradient(
+        163deg,
+        rgba(0, 0, 0, 0.2) 13.92%,
+        rgba(0, 0, 0, 0) 88.2%
+      ),
+      url("../../public/images/dashboard.webp"),
+      lightgray 50% / cover;
+    background-position: center;
+    background-size: 640px;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+  main {
+    background:
+      linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%),
+      linear-gradient(
+        271deg,
+        rgba(0, 0, 0, 0.2) 13.87%,
+        rgba(0, 0, 0, 0) 98.99%
+      ),
+      linear-gradient(
+        110deg,
+        rgba(0, 0, 0, 0.94) 13.66%,
+        rgba(0, 0, 0, 0) 93.14%
+      ),
+      linear-gradient(4deg, #000 -1.63%, rgba(0, 0, 0, 0) 126.68%),
+      linear-gradient(
+        163deg,
+        rgba(0, 0, 0, 0.2) 13.92%,
+        rgba(0, 0, 0, 0) 88.2%
+      ),
+      url("../../public/images/dashboard.webp"),
+      lightgray 50% / cover;
+    background-position: right;
+    background-size: 100vw;
+    background-repeat: no-repeat;
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(92deg, #c33367, #ef2b3d, #fb7a46);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-bg {
+  background: linear-gradient(
+    95deg,
+    rgba(160, 58, 137, 0.8) -1.45%,
+    rgba(239, 43, 61, 0.8) 56.31%,
+    rgba(251, 122, 70, 0.8) 102.19%
+  );
+}
+
+.image-overlay {
+  background:
+    linear-gradient(271deg, rgba(0, 0, 0, 0.2) 13.87%, rgba(0, 0, 0, 0) 98.99%),
+    linear-gradient(
+      110deg,
+      rgba(0, 0, 0, 0.84) 13.66%,
+      rgba(0, 0, 0, 0) 93.14%
+    ),
+    linear-gradient(4deg, #000 -1.63%, rgba(0, 0, 0, 0) 126.68%),
+    linear-gradient(163deg, rgba(0, 0, 0, 0) 13.92%, rgba(0, 0, 0, 0) 88.2%),
+    50% / cover no-repeat;
+}
+
+.blob {
+  border-radius: 17rem;
+  background: radial-gradient(
+      ellipse at 50% 50%,
+      rgba(239, 43, 61, 0.8) 0%,
+      rgba(239, 43, 61, 0.8) 100%
+    ),
+    radial-gradient(
+      ellipse at 70% 60%,
+      rgba(239, 43, 61, 0.8) 0%,
+      rgba(195, 224, 96, 0) 90%
+    ),
+    radial-gradient(
+      ellipse at 30% 30%,
+      rgba(251, 122, 70, 0.8) 0%,
+      rgba(195, 224, 96, 0) 60%
+    ),
+    radial-gradient(
+      ellipse at bottom left,
+      rgba(160, 58, 137, 0.8) 0%,
+      rgba(0, 163, 203, 0) 70%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(18, 46, 119, 0) 0%,
+      rgba(18, 46, 119, 0) 75%,
+      rgba(251, 122, 70, 0.8) 100%
+    ),
+    linear-gradient(
+      to right,
+      rgba(160, 58, 137, 0.8) 0%,
+      rgba(239, 43, 61, 0.8) 35%,
+      rgba(251, 122, 70, 0.8) 65%,
+      rgba(239, 43, 61, 0.8) 100%
+    );
+  background-blend-mode: screen, luminosity, saturation, darken, color-dodge,
+    color;
+  filter: blur(74px);
+}
