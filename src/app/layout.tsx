@@ -13,9 +13,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="h-full">
     <head>
-        <title>Challenge Pool</title>
+        <title>DuelX</title>
         <meta name="description" content="Some description here" />
         <meta
             name="keywords"
@@ -32,9 +32,11 @@ export default function RootLayout({
             content=""
         />
     </head>
-      <body className={clashDisplay.className}>
+      <body className={`${clashDisplay.className} relative h-full flex flex-col min-h-screen`}>
         <Navbar />
-        {children}
+        <div className="flex-grow flex-1">
+            {children}
+        </div>
         <Footer />
       </body>
     </html>

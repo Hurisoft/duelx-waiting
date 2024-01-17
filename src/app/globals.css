@@ -85,6 +85,10 @@ body {
   );
 }
 
+.circle-gradient-bg {
+  background: linear-gradient(158deg, #A03A89 25.16%, #EF2B3D 129.48%, #FB7A46 250.2%);
+}
+
 .image-overlay {
   background:
     linear-gradient(271deg, rgba(0, 0, 0, 0.2) 13.87%, rgba(0, 0, 0, 0) 98.99%),
