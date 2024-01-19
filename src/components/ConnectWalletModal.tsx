@@ -1,6 +1,8 @@
+"use client";
+
 import React, { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import Link from "next/link";
+import { useConnectModal } from "@rainbow-me/rainbowkit";
 
 function ConnectWalletModal({
   isOpen,
@@ -12,6 +14,8 @@ function ConnectWalletModal({
   function closeModal() {
     setIsOpen(false);
   }
+
+  const { openConnectModal } = useConnectModal();
 
   return (
     <Transition appear show={isOpen} as={Fragment}>
@@ -47,15 +51,25 @@ function ConnectWalletModal({
                   <img src="/icons/close.svg" alt="" />
                 </button>
                 <div className="relative z-50 flex flex-col items-center gap-12 py-40">
-                  <img src="/images/airdrop.svg" className="w-60" alt="" />
-                  <p className="text-3xl font-medium">
+                  <img
+                    src="/images/airdrop.svg"
+                    className="w-32 md:w-60"
+                    alt=""
+                  />
+                  <p className="text-xl text-center md:text-left md:text-3xl font-medium">
                     Want to be part of our token airdrop?
                   </p>
-                  <Link href="/compliance">
-                    <button className="rounded-full px-12 py-5 transition gradient-bg hover:opacity-80">
-                      Connect Wallet
-                    </button>
-                  </Link>
+                  <button
+                    className="rounded-full px-12 py-5 transition gradient-bg hover:opacity-80"
+                    onClick={() => {
+                      closeModal();
+                      if (openConnectModal) {
+                        openConnectModal();
+                      }
+                    }}
+                  >
+                    Connect Wallet
+                  </button>
                 </div>
                 <img
                   src="/images/dashboard-slanted.webp"

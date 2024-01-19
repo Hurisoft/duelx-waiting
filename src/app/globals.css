@@ -86,7 +86,12 @@ body {
 }
 
 .circle-gradient-bg {
-  background: linear-gradient(158deg, #A03A89 25.16%, #EF2B3D 129.48%, #FB7A46 250.2%);
+  background: linear-gradient(
+    158deg,
+    #a03a89 25.16%,
+    #ef2b3d 129.48%,
+    #fb7a46 250.2%
+  );
 }
 
 .image-overlay {
@@ -140,4 +145,8 @@ body {
   background-blend-mode: screen, luminosity, saturation, darken, color-dodge,
     color;
   filter: blur(74px);
+}
+
+[data-rk] .ju367vb2 {
+  @apply !bg-zinc-300 !bg-opacity-30;
 }
