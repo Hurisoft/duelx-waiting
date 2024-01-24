@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en" className="h-full">
       <head>
         <title>DuelX</title>
-        <meta name="description" content="Some description here" />
+        <meta name="description" content="Welcome to the future of friendly competition! The Challenge Pool platform is your gateway to thrilling, decentralized showdowns where wit and intuition take center stage." />
         <meta
           name="keywords"
           content="Blockchain,AI,Artificial Intelligence,Software"
@@ -29,7 +29,7 @@ export default function RootLayout({
           property="og:image"
           content="https://duelx.xyz/duelx-preview-image.jpg"
         />
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="Welcome to the future of friendly competition! The Challenge Pool platform is your gateway to thrilling, decentralized showdowns where wit and intuition take center stage." />
         <meta
           name="twitter:image"
           content="https://duelx.xyz/duelx-preview-image.jpg"
