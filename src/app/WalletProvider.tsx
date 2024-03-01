@@ -14,12 +14,12 @@ import { publicProvider } from "wagmi/providers/public";
 
 const { chains, publicClient } = configureChains(
   [mainnet, polygon, optimism, arbitrum, base, zora],
-  [alchemyProvider({ apiKey: "process.env.ALCHEMY_ID" }), publicProvider()],
+  [alchemyProvider({ apiKey: process.env.NEXT_PUBLIC_WALLET_ID ?? "" }), publicProvider()],
 );
 
 const { connectors } = getDefaultWallets({
   appName: "DuelX",
-  projectId: "YOUR_PROJECT_ID",
+  projectId: process.env.NEXT_PUBLIC_WALLET_ID ?? "",
   chains,
 });
 
