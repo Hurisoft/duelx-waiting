@@ -3,13 +3,18 @@
 import { useState } from "react";
 import ConnectWalletModal from "@/components/ConnectWalletModal";
 import Timer from "@/components/Timer";
+import {useConnectModal} from "@rainbow-me/rainbowkit";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
+  const { openConnectModal } = useConnectModal();
+
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    setIsOpen(true);
+    if (openConnectModal) {
+      openConnectModal()
+    }
   };
 
   return (
